@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Editor Online</title>
+        <% include editor-packages %>
+    </head>
+    <body>
+        <main>    
+        <div id='menu'>
+        </div>
+        <div class='container-fluid' style='width:90%;'>
+            <div id='editor' 
+                data-editor="editor"
+    	        data-config="cfg"
+            ></div>
+        </div>
+        </main>
+    </body>
+
+    <script type="text/javascript">
+    
+    var menuCfg = {
+        id: 'menu',
+        menu: {
+            '檔案' : {
+                '儲存': {
+                    visible: true,
+                    action: function() {
+                        console.log('menuSave');
+                    }
+                },
+                'dummy': {
+                    visible: true,
+                    action: function() {
+                        console.log('dummy');
+                    }
+                },
+            },
+            '顯示' : {
+                '預覽(關閉)': {
+                    visible: true,
+                    action: function() {
+                        gEditor.turnOnPreview();
+                        gMenu.setSubMenuVisible('顯示', '預覽(關閉)', false);
+                        gMenu.setSubMenuVisible('顯示', '預覽(開啟)', true);
+                    }
+                },
+                '預覽(開啟)': {
+                    visible: false,
+                    action: function() {
+                        gEditor.turnOffPreview();
+                        gMenu.setSubMenuVisible('顯示', '預覽(關閉)', true);
+                        gMenu.setSubMenuVisible('顯示', '預覽(開啟)', false);
+                    }
+                },
+            },
+            '設定' : {
+                'dummy': {
+                    visible: true,
+                    action: function() {
+                        console.log('setting-dummy');
+                    }
+                },
+            },
+        },
+    }
+    
+    var cfg = {
+        preview: false,
+        rows: [
+	        {
+	            seq: 1,
+	            id: 11,
+	            hidden: false,
+	            fluid: false
+	        },
+	        {
+	            seq: 2,
+	            id: 12,
+	            hidden: true,
+	            fluid: true,
+	            bgColor: 'rgb(255,0 ,0)',
+	            fontColor: 'rgb(0, 0, 255)'
+	        },
+	        {
+	            seq: 3,
+	            id: 13,
+	            hidden: false,
+	            fluid: false
+	        }
+	    ],
+	    //"cols": {
+	    //    "11": [
+	    //        {
+	    //            "id": 1111,
+	    //            "seq": 1,
+	    //            "fluid": "0",
+	    //            "hidden": "0",
+	    //            "col": 12,
+	    //            "category": "label"
+	    //        }
+	    //    ]
+	    //}
+    };
+    
+    $(document).ready(function() {
+        initMenu(menuCfg);
+        $('#editor').open();
+    });
+    
+</script>
+</html>

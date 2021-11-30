@@ -1,0 +1,136 @@
+body {
+}
+
+#setting-panel { z-index:1000; position:fixed; top:100px; width:100px; right: 0px;}
+.editor-setting-btn {position:absolute;top:0px; right:20px; z-index: 1010; border: 1px solid black;min-width: 80px;}
+
+.DTED_Lightbox_Wrapper {
+    position: absolute !important;
+    width: 30% !important;
+    left: 69% !important;
+    margin-left: 0!important;
+    z-index: 1010 !important;
+}
+.DTED_Lightbox_Content_Wrapper{
+    position: absolute !important;
+    top: 50px;
+}
+.DTED_Lightbox_Close {
+    border: 0 !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	top: 20px !important;
+}
+.DTED_Lightbox_Close:after{
+    font-size: 40px !important;
+    line-height: 32px; !important;
+}
+.DTE_Header {
+    border-bottom: 1px solid #FFF !important;
+}
+.DTE_Body {
+    background-color: #374250;
+}
+.DTE_Body_Content {
+    background-color: #374250 !important;
+}
+.DTE_Form_Info {
+    background-color: #374250;
+    color: #FFF;
+}
+.DTE_Form_Content {
+    background-color: #374250;
+    color: #FFF;
+}
+.DTE_Footer {
+    background-color: #374250 !important;
+    border-top: 1px solid #FFF !important;
+}
+.DTE_Field:hover {
+    background-color: #374250 !important;
+}
+.DTE_Field {
+    padding: 5px 10% !important;
+}
+.DTE_Field_Info {
+    color:#F5F500; 
+    font-size: 18px !important;
+    padding-top: 5px;
+}
+.DTED_Lightbox_Close {
+    top: 15px; 
+    color: #FFFFFF; 
+    width:30px !important; 
+    height: 30px !important;
+    right: 0px !important;
+}
+.DTE_Label {
+    color: #FFF; 
+    font-size:18px;
+    padding-top: 0px !important;
+}
+.DTE_Header_Content{
+    color:#FFF; 
+    z-index:1010; 
+    position:absolute;
+}
+.DTED_Lightbox_Shown{
+    display:block !important;
+}
+
+div.DTE_Field_Input > div > div label {
+    margin-left: 0.75em;
+    color: #fff !important;
+    font-size: 18px;
+}
+
+input.editor-checkbox-label {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
+
+.btn {
+    background-image: none !important;
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	border-radius: 0.27rem !important;
+	color: #fff !important;
+}
+.btn-primary {
+    background-color: #4285f4!important;
+}
+.btn-info {
+    background-color: #0dcaf0!important;
+}
+.btn-danger {
+    background-color: #dc3545!important;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.colorPickSelector {
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    -webkit-transition: all linear .2s; 
+    -moz-transition: all linear .2s; 
+    -ms-transition: all linear .2s;
+    -o-transition: all linear .2s;
+    transition: all linear .2s;
+}
+
+.colorPickSelector: hover { transform: scale(1.1); }
