@@ -48,13 +48,16 @@ $.WebMenu.prototype = {
     _initStyle: function() {
         var style = `
             <style class'menu-style'>
-                #menu{padding: 10px;background-color: #4f5a63;z-index: 1030;}
-                .menu-item{font-size: 20px;color: white;font-weight: bold;padding: 0 20px 0 20px;text-decoration: none;z-index: 1030;}
+                #menu{padding: 10px;background-image: linear-gradient(to bottom right, #2B2B2B, #4F4F4F);z-index: 1080;}
+                .menu-item{font-size: 20px;color: white;font-weight: bold;padding: 0 20px 0 20px;text-decoration: none;z-index: 1080;}
                 .menu-item:hover{color: white;cursor: pointer;}
-                .submenu-ul{list-style: none;padding-inline-start: 2px;}
+                .submenu-ul{list-style: none;padding-inline-start: 2px;margin-bottom: 0px;}
                 .submenu-item{font-size: 18px;color: white;padding-top: 6px;}
                 .submenu-item:hover{color: white;cursor: pointer;}
-                .submenu-item-panel{position: absolute;background-color:#4f5a63;top:48px;border: 1px solid black;padding:10px;z-index: 1030;border-radius: 6px;opacity: 0.85;}
+                .submenu-item-panel{
+                    position: absolute;
+                    background-image: linear-gradient(to bottom right, #2B2B2B, #4F4F4F);
+                    top:48px;border: 1px solid black;padding:10px;z-index: 1080;border-radius: 6px;opacity: 0.85;}
             </style>
         `;
         this.menu.append(style);
@@ -84,11 +87,20 @@ $.WebMenu.prototype = {
         for (const [name, item] of Object.entries(submenu)) {
             if (item.visible == false)
                 continue;
-            html += `
-                <li class='submenu-item' data-menu='{1}' data-submenu='{0}'>
-                    {0}
-                </li>
-            `.format(name, menu);
+            if (item.html != null) {
+                html += `
+                    <li class='submenu-item' data-menu='{1}' data-submenu='{0}'>
+                        {2}
+                    </li>
+                `.format(name, menu, item.html());
+            }
+            else {
+                html += `
+                    <li class='submenu-item' data-menu='{1}' data-submenu='{0}'>
+                        {0}
+                    </li>
+                `.format(name, menu);    
+            }
         }
         
         html += `

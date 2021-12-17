@@ -1,13 +1,102 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Web Editor Online</title>
+        <title>網頁編輯器</title>
+        <meta name="description" content="線上網頁編輯器提供了一個免費，快速，不用編寫任何一行 HTML 程式碼，就可以產生出自己要的網頁框架，開發者只要在這框架上，添加各自想要的 jquery 控制方式即可，使用此線上版網頁編輯器，可以大幅度減少一開始的網頁開發時間。" ></meta>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <meta property="og:type" content="article"></meta>
+        <meta property="og:title" content="網頁編輯器" ></meta>
+        <meta property="og:description" content="線上網頁編輯器提供了一個免費，快速，不用編寫任何一行 HTML 程式碼，就可以產生出自己要的網頁框架，開發者只要在這框架上，添加各自想要的 jquery 控制方式即可，使用此線上版網頁編輯器，可以大幅度減少一開始的網頁開發時間。"></meta>
+        <meta property="og:url" content="http://twhomemaker.com/editor"></meta>
+        <meta property="og:site_name" content="網頁編輯器"></meta>
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:title" content="網頁編輯器"></meta>
+        <meta name="twitter:description" content="線上網頁編輯器提供了一個免費，快速，不用編寫任何一行 HTML 程式碼，就可以產生出自己要的網頁框架，開發者只要在這框架上，添加各自想要的 jquery 控制方式即可，使用此線上版網頁編輯器，可以大幅度減少一開始的網頁開發時間。"></meta>        
+        <script data-ad-client="ca-pub-9815375419797640" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9815375419797640"
+     crossorigin="anonymous"></script>
         <% include editor-packages %>
     </head>
     <body>
-        <main>    
+        <div class="alert alert-success text-center" id="success-alert">
+            <strong id='alert-msg'></strong>
+        </div>
+        <div class="modal fade" id="versionModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">版本</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>網頁編輯器 v1.0.0</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
         <div id='menu'>
         </div>
+        <div id='desp' class='p-4'>
+            <style class='col-style-1639608467891'>
+            .label-1639608467891 {
+                width: 100%;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                text-align: center;
+                font-size: 32px;
+            }
+            </style>
+            <row>
+                <div class='container' style='background-color: rgb(212, 212, 212);color: rgb(0, 0, 0);'>
+                    <div class='row' style='min-height: 5px;'>
+                        <div class='col-md-12 '>
+                            <label class='label-1639608467891'> 網頁編輯器 <label>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </row>
+            <style class='col-style-1639608542939'>
+            .label-1639608542939 {
+                width: 100%;
+                color: rgb(0, 0, 0);
+                text-align: left;
+                font-size: 20px;
+            }
+            </style>
+            <style class='col-style-1639608678536'>
+            .text {}
+            </style>
+            <row>
+                <div class='container' style='background-color: rgba(0, 0, 0, 0);color: rgb(0, 0, 0);'>
+                    <div class='row' style='min-height: 5px;'>
+                        <div class='col-md-12 '>
+                            <label class='label-1639608542939'> 線上網頁編輯器提供了一個免費，快速，不用編寫任何一行 HTML 程式碼，就可以產生出自己要的網頁框架，開發者只要在這框架上，添加各自想要的 jquery 控制方式即可，使用此線上版網頁編輯器，可以大幅度減少一開始的網頁開發時間。另外此編輯器也提供了 DataTable 表格，Chart 圖表等常用的範例。 <label>
+                                </label>
+                            </label>
+                        </div>
+                        <div class='col-md-12 '>
+                            <div class=''>
+                                <div id='desp' class='p-4'>
+                                    <ul>
+                                        <li>[功能]-&gt;[載入範例]，可以看到使用範例</li>
+                                        <li>[功能]-&gt;[複製原始碼]，編輯完成時，可以將原始 HTML 原始碼複製到剪貼簿中</li>
+                                        <li>[功能]-&gt;[匯出設定檔]，可以把目前編輯結果，複製到剪貼簿，再自行儲存於檔案中即可保存</li>
+                                        <li>[功能]-&gt;[匯入設定檔]，可以把之前編輯結果載入，繼續上次編輯</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </row>
+        </div>
+        <hr>
         <div class='container-fluid' style='width:90%;'>
             <div id='editor' 
                 data-editor="editor"
@@ -15,95 +104,101 @@
             ></div>
         </div>
         </main>
+        <footer >
+           <style class='col-style-1639608196920'>
+            .hrline-1639608196920 {
+                color: rgb(110, 110, 110);
+                opacity: 1;
+            }
+            </style>
+            <style class='col-style-1639608221080'>
+            .label-1639608221080 {
+                width: 100%;
+                color: rgb(0, 0, 0);
+                text-align: center;
+                font-size: 14px;
+            }
+            </style>
+            <row>
+                <div class='container-fluid ' style='background-color: rgba(0, 0, 0, 0);color: rgb(0, 0, 0);'>
+                    <div class='row' style='min-height: 5px;'>
+                        <div class='col-md-12 '>
+                            <hr class='hrline-1639608196920'>
+                        </div>
+                        <div class='col-md-12 '>
+                            <label class='label-1639608221080'> Copyright ©2021 Online Web Editor Tools,All Rights Reserved <label>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </row>
+        </footer>
     </body>
 
-    <script type="text/javascript">
-    
+<script type="text/javascript">
+    var jar = null;
     var menuCfg = {
         id: 'menu',
         menu: {
-            '檔案' : {
-                '儲存': {
-                    visible: true,
-                    action: function() {
-                        console.log('menuSave');
-                    }
-                },
-                'dummy': {
-                    visible: true,
-                    action: function() {
-                        console.log('dummy');
-                    }
-                },
-            },
-            '顯示' : {
+            '功能' : {
                 '預覽(關閉)': {
                     visible: true,
                     action: function() {
                         gEditor.turnOnPreview();
-                        gMenu.setSubMenuVisible('顯示', '預覽(關閉)', false);
-                        gMenu.setSubMenuVisible('顯示', '預覽(開啟)', true);
+                        gMenu.setSubMenuVisible('功能', '預覽(關閉)', false);
+                        gMenu.setSubMenuVisible('功能', '預覽(開啟)', true);
                     }
                 },
                 '預覽(開啟)': {
                     visible: false,
                     action: function() {
                         gEditor.turnOffPreview();
-                        gMenu.setSubMenuVisible('顯示', '預覽(關閉)', true);
-                        gMenu.setSubMenuVisible('顯示', '預覽(開啟)', false);
+                        gMenu.setSubMenuVisible('功能', '預覽(關閉)', true);
+                        gMenu.setSubMenuVisible('功能', '預覽(開啟)', false);
                     }
                 },
-            },
-            '設定' : {
-                'dummy': {
+                '載入範例': {
                     visible: true,
                     action: function() {
-                        console.log('setting-dummy');
+                        gEditor.loadSample();
+                    },
+                },
+                '複製原始碼': {
+                    visible: true,
+                    action: function() {
+                        gEditor.export();
+                    },
+                },
+                '匯出設定檔': {
+                    visible: true,
+                    action: function() {
+                        gEditor.exportCfg();
+                    },
+                },
+                '匯入設定檔': {
+                    visible: true,
+                    action: function() {
+                        gEditor.importCfg();
+                    },
+                },
+            },
+            '關於' : {
+                '版本': {
+                    visible: true,
+                    action: function() {
+                        $('#versionModal').modal('show');
                     }
                 },
             },
         },
     }
-    
     var cfg = {
         preview: false,
-        rows: [
-	        {
-	            seq: 1,
-	            id: 11,
-	            hidden: false,
-	            fluid: false
-	        },
-	        {
-	            seq: 2,
-	            id: 12,
-	            hidden: true,
-	            fluid: true,
-	            bgColor: 'rgb(255,0 ,0)',
-	            fontColor: 'rgb(0, 0, 255)'
-	        },
-	        {
-	            seq: 3,
-	            id: 13,
-	            hidden: false,
-	            fluid: false
-	        }
-	    ],
-	    //"cols": {
-	    //    "11": [
-	    //        {
-	    //            "id": 1111,
-	    //            "seq": 1,
-	    //            "fluid": "0",
-	    //            "hidden": "0",
-	    //            "col": 12,
-	    //            "category": "label"
-	    //        }
-	    //    ]
-	    //}
-    };
+    }
     
     $(document).ready(function() {
+        $("#success-alert").hide();
         initMenu(menuCfg);
         $('#editor').open();
     });

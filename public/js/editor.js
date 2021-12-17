@@ -14,6 +14,10 @@ $.WebEditor.prototype = {
     // public functions
     //
     open: editorOpen,
+    loadSample: editorLoadSample,
+    export: editorExport,
+    exportCfg: editorExportCfg,
+    importCfg: editorImportCfg,
     turnOnPreview: editorTurnOnPreview,
     turnOffPreview: editorTurnOffPreview,
 
@@ -28,15 +32,22 @@ $.WebEditor.prototype = {
     _prepareCfg: _editorPrepareCfg,
     _getRow: _editorGetRow,
     _getRowIdx: _editorGetRowIdx,
+    _getCol: _editorGetCol,
+    _getColIdx: _editorGetColIdx,
     
     // row
     _rowAdd: _editorAddRow,
     _rowEdit: _editorEditRow,
     _rowDel: _editorDelRow,
-    _rowMoveUp: _editorMoveUp,
-    _rowMoveDown: _editorMoveDown,
+    _rowMoveUp: _editorMoveUpRow,
+    _rowMoveDown: _editorMoveDownRow,
     
     // col
+    _colAdd: _editorAddCol,
+    _colEdit: _editorEditCol,
+    _colDel: _editorDelCol,
+    _colMoveUp: _editorMoveUpCol,
+    _colMoveDown: _editorMoveDownCol,
 }
 
 //

@@ -64,7 +64,10 @@
             
             this.element.click(function(event) {
                 event.preventDefault();
-                self.show(event.pageX - 100, event.pageY + 20);
+                var x = event.pageX - 100;
+                if (x < 0)
+                    x = 0;
+                self.show(x, event.pageY + 20);
                 
                 $('.colorPickButton').click(function(event) {
 					self.color = $(event.target).attr('hexValue');

@@ -4,13 +4,24 @@ body {
 #setting-panel { z-index:1000; position:fixed; top:100px; width:100px; right: 0px;}
 .editor-setting-btn {position:absolute;top:0px; right:20px; z-index: 1010; border: 1px solid black;min-width: 80px;}
 
-.DTED_Lightbox_Wrapper {
-    position: absolute !important;
-    width: 30% !important;
-    left: 69% !important;
-    margin-left: 0!important;
-    z-index: 1010 !important;
+@media only screen and (min-width : 768px) {
+    .DTED_Lightbox_Wrapper {
+        position: absolute !important;
+        margin-left: 0!important;
+        z-index: 1050 !important;
+    }
 }
+
+@media only screen and (min-width : 992px) {
+    .DTED_Lightbox_Wrapper {
+        position: absolute !important;
+        width: 30% !important;
+        left: 69% !important;
+        margin-left: 0!important;
+        z-index: 1050 !important;
+    }
+}
+
 .DTED_Lightbox_Content_Wrapper{
     position: absolute !important;
     top: 50px;
@@ -52,7 +63,7 @@ body {
     background-color: #374250 !important;
 }
 .DTE_Field {
-    padding: 5px 10% !important;
+    padding: 5px 10px !important;
 }
 .DTE_Field_Info {
     color:#F5F500; 
@@ -70,20 +81,33 @@ body {
     color: #FFF; 
     font-size:18px;
     padding-top: 0px !important;
+    width: 30% !important;
 }
 .DTE_Header_Content{
     color:#FFF; 
-    z-index:1010; 
+    z-index:1050; 
     position:absolute;
 }
 .DTED_Lightbox_Shown{
     display:block !important;
 }
 
+.DTE_Field_Input {
+    width: 70% !important;
+}
+
 div.DTE_Field_Input > div > div label {
     margin-left: 0.75em;
     color: #fff !important;
     font-size: 18px;
+}
+
+div.DTE_Field_Input > div > select {
+    min-width: 100px;
+}
+
+.DTE_Form_Error {
+    color: yellow !important;
 }
 
 input.editor-checkbox-label {
